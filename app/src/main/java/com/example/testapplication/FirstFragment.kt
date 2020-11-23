@@ -26,8 +26,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         var tv = view.findViewById<TextView>(R.id.textview_central);
-        tv.text = "testAgain";
-        var procString = ProceduralString();
+        var procString = ProceduralString(0);
         tv.text = procString.toString();
 
         view.findViewById<Button>(R.id.button_first).setOnClickListener {

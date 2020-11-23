@@ -11,7 +11,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
-class ProceduralString {
+class ProceduralString(parentLength: Int) {
+    private var parentLength: Int = 0
+
     companion object {
         private val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ")
         private val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ")
@@ -60,11 +62,14 @@ class ProceduralString {
     init{
         current = prop1 + prop2 + prop3 + prop4 + prop5;
 
-        if (current.length * 1.0f / recurseMaxlen < Math.random()) {
-            val childString = ProceduralString();
+        if ((current.length + parentLength) * 1.0f / recurseMaxlen < Math.random()) {
+            val childString = ProceduralString(current.length + parentLength);
             current += getRandomStudyVerb() + childString.toString();
         }
-        println(current)
+
+        // only if root ProceduralString do we want to print out content
+        if (parentLength == 0)
+            println(current)
     }
 
     public override fun toString(): String {
