@@ -45,8 +45,8 @@ class ProceduralString {
         }
 
         // define a threshold after which we do not generate an additional substring
-        val adjectiveThreshold = 0.3;
-        val recurseMaxlen = 40;
+        private const val adjectiveThreshold = 0.3;
+        private const val recurseMaxlen = 40;
     }
 
     private val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
