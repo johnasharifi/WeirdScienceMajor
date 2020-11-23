@@ -11,7 +11,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
-class ProceduralString {
+class ProceduralString(parentLength: Int) {
+    private var parentLength: Int = 0
+
     companion object {
         private val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ")
         private val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ")
@@ -44,28 +46,33 @@ class ProceduralString {
             return BridgingTokens[(BridgingTokens.count() * Math.random()).toInt()];
         }
 
+        // define a threshold after which we do not generate an additional substring
+        private const val adjectiveThreshold = 0.3;
+        private const val recurseMaxlen = 40;
     }
 
-    public override fun toString(): String {
-        val adjectiveThreshold = 0.3;
-        val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
-        val prop2 = if (adjectiveThreshold < Math.random()) "" else getRandomQualifier();
-        val prop3 = if (adjectiveThreshold < Math.random()) "" else getRandomVerbOf();
+    private val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
+    private val prop2 = if (adjectiveThreshold < Math.random()) "" else getRandomQualifier();
+    private val prop3 = if (adjectiveThreshold < Math.random()) "" else getRandomVerbOf();
 
-        val prop4 = getRandomField()
-        val prop5 = getRandomOlogies()
+    private val prop4 = getRandomField()
+    private val prop5 = getRandomOlogies()
 
-        // define a threshold after which we do not generate additional specifiers
-        val recurseMaxlen = 40;
+    private var current = "";
+    init{
+        current = prop1 + prop2 + prop3 + prop4 + prop5;
 
-        var current = prop1 + prop2 + prop3 + prop4 + prop5;
-
-        if (current.length * 1.0f / recurseMaxlen < Math.random()) {
-            val childString = ProceduralString();
+        if ((current.length + parentLength) * 1.0f / recurseMaxlen < Math.random()) {
+            val childString = ProceduralString(current.length + parentLength);
             current += getRandomStudyVerb() + childString.toString();
         }
 
-        println(current)
+        // only if root ProceduralString do we want to print out content
+        if (parentLength == 0)
+            println(current)
+    }
+
+    public override fun toString(): String {
         return current;
     }
 }
