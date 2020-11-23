@@ -46,14 +46,14 @@ class ProceduralString {
 
     }
 
-    val prop4 = getRandomField()
-    val prop5 = getRandomOlogies()
-
     public override fun toString(): String {
         val adjectiveThreshold = 0.3;
         val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
         val prop2 = if (adjectiveThreshold < Math.random()) "" else getRandomQualifier();
         val prop3 = if (adjectiveThreshold < Math.random()) "" else getRandomVerbOf();
+
+        val prop4 = getRandomField()
+        val prop5 = getRandomOlogies()
 
         // define a threshold after which we do not generate additional specifiers
         val recurseMaxlen = 40;
