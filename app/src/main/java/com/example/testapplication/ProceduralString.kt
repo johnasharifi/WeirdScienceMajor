@@ -13,11 +13,11 @@ import androidx.navigation.fragment.findNavController
 
 class ProceduralString {
     companion object {
-        val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ")
-        val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ")
-        val VerbOf = arrayOf("analysis of ", "study of ", "critique of ", "investigation of ", "research into ", "assay of ", "partition of ")
-        val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun")
-        val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics")
+        private val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ")
+        private val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ")
+        private val VerbOf = arrayOf("analysis of ", "study of ", "critique of ", "investigation of ", "research into ", "assay of ", "partition of ")
+        private val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun")
+        private val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics")
         private val BridgingTokens = arrayOf(" with applications in ", " with an emphasis on ", " of ")
 
         fun getRandomIntensifier(): String {
