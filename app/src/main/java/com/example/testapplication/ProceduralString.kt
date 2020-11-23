@@ -13,19 +13,23 @@ import androidx.navigation.fragment.findNavController
 
 class ProceduralString {
     companion object {
-        val Intensifiers = arrayOf("super", "poly", "hyper", "extended", "modern", "archaeo", "ordinal")
-        val Qualifiers = arrayOf("progressive", "critical", "analytical", "didactic", "material")
+        val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ")
+        val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ")
+        val VerbOf = arrayOf("analysis of ", "study of ", "critique of ", "investigation of ", "research into ", "assay of ", "partition of ")
         val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun")
         val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics")
         private val BridgingTokens = arrayOf(" with applications in ", " with an emphasis on ", " of ")
 
-        // TODO array of arrays
         fun getRandomIntensifier(): String {
             return Intensifiers[(Intensifiers.count() * Math.random()).toInt()];
         }
 
         fun getRandomQualifier(): String {
             return Qualifiers[(Qualifiers.count() * Math.random()).toInt()];
+        }
+
+        fun getRandomVerbOf(): String {
+            return VerbOf[(VerbOf.count() * Math.random()).toInt()];
         }
 
         fun getRandomField(): String {
@@ -40,20 +44,21 @@ class ProceduralString {
             return BridgingTokens[(BridgingTokens.count() * Math.random()).toInt()];
         }
 
-        // TODO join into R-{bridge} R
-        var Bridges = arrayOf("etic ", "ological ")
     }
 
-    val prop1 = getRandomIntensifier() + " "
-    val prop2 = getRandomQualifier() + " "
-    val prop3 = getRandomField()
-    val prop4 = getRandomOlogies()
+    val prop4 = getRandomField()
+    val prop5 = getRandomOlogies()
 
     public override fun toString(): String {
+        val adjectiveThreshold = 0.3;
+        val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
+        val prop2 = if (adjectiveThreshold < Math.random()) "" else getRandomQualifier();
+        val prop3 = if (adjectiveThreshold < Math.random()) "" else getRandomVerbOf();
+
         // define a threshold after which we do not generate additional specifiers
         val recurseMaxlen = 40;
 
-        val current = prop1 + prop2 + prop3 + prop4;
+        val current = prop1 + prop2 + prop3 + prop4 + prop5;
 
         if (current.length * 1.0f / recurseMaxlen < Math.random()) {
             val childString = ProceduralString();
