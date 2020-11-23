@@ -58,13 +58,14 @@ class ProceduralString {
         // define a threshold after which we do not generate additional specifiers
         val recurseMaxlen = 40;
 
-        val current = prop1 + prop2 + prop3 + prop4 + prop5;
+        var current = prop1 + prop2 + prop3 + prop4 + prop5;
 
         if (current.length * 1.0f / recurseMaxlen < Math.random()) {
             val childString = ProceduralString();
-            return current + getRandomStudyVerb() + childString.toString();
+            current += getRandomStudyVerb() + childString.toString();
         }
 
+        println(current)
         return current;
     }
 }
