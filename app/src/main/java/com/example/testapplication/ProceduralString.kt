@@ -17,6 +17,7 @@ class ProceduralString {
         val Qualifiers = arrayOf("progressive", "critical", "analytical", "didactic", "material")
         val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun")
         val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics")
+        private val BridgingTokens = arrayOf(" with applications in ", " with an emphasis on ", " of ")
 
         // TODO array of arrays
         fun getRandomIntensifier(): String {
@@ -35,6 +36,10 @@ class ProceduralString {
             return Ologies[(Ologies.count() * Math.random()).toInt()];
         }
 
+        fun getRandomStudyVerb(): String {
+            return BridgingTokens[(BridgingTokens.count() * Math.random()).toInt()];
+        }
+
         // TODO join into R-{bridge} R
         var Bridges = arrayOf("etic ", "ological ")
     }
@@ -45,14 +50,14 @@ class ProceduralString {
     val prop4 = getRandomOlogies()
 
     public override fun toString(): String {
-        // define a threshold after which we do not generate additional specificiers
+        // define a threshold after which we do not generate additional specifiers
         val recurseMaxlen = 40;
 
         val current = prop1 + prop2 + prop3 + prop4;
 
         if (current.length * 1.0f / recurseMaxlen < Math.random()) {
             val childString = ProceduralString();
-            return current + " of " + childString.toString();
+            return current + getRandomStudyVerb() + childString.toString();
         }
 
         return current;
