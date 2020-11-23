@@ -56,15 +56,18 @@ class ProceduralString {
     private val prop4 = getRandomField()
     private val prop5 = getRandomOlogies()
 
-    public override fun toString(): String {
-        var current = prop1 + prop2 + prop3 + prop4 + prop5;
+    var current = "";
+    init{
+        current = prop1 + prop2 + prop3 + prop4 + prop5;
 
         if (current.length * 1.0f / recurseMaxlen < Math.random()) {
             val childString = ProceduralString();
             current += getRandomStudyVerb() + childString.toString();
         }
-
         println(current)
+    }
+
+    public override fun toString(): String {
         return current;
     }
 }
