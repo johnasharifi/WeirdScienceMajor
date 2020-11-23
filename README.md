@@ -1,102 +1,131 @@
 # WeirdScienceMajor
-Are you a higher ed student? At family get-togethers, do you get bombarded with variations of the question "So what are you studying in college?"
+Are you a higher ed student? At family get-togethers, do you repeatedly get asked variations of the question "So what are you studying in college?"
 
-This app generates a random science-y string, which you can claim as your current field of study.
+See if anyone is paying attention to your answer. This app generates a random science-y string, which you can claim as your current field of study. 
 
 # Examples
 
-extended material hypography
+analytical study of heliomistry with applications in hydretics
 
-archaeo progressive ecclanetics
+mechnohydranetics
 
-ordinal didactic astrography
+research into geonautics
 
-ordinal didactic ecclanetics
+modern forensic biography
+astrontology with applications in assay of bietics with an emphasis on material neurography
 
-poly critical immunology
+progressive geetics with an emphasis on didactic biontology
 
-archaeo analytical helianetics
+material heliontology with an emphasis on helionautics with an emphasis on immunomedicine
 
-hyper analytical helietics
+extended immunomistry with an emphasis on analytical biomedicine
 
-extended critical heliontology
+research into neuranetics with an emphasis on modern immunomistry
 
-archaeo progressive helietics
+hydromedicine
 
-extended progressive cosmography
+critique of biology
 
-modern progressive cosmanetics
+analysis of hydromedicine
 
-ordinal didactic bietics
+progressive study of anthromedicine
 
-extended progressive helietics
+assay of immunography with applications in neuronautics
 
-poly progressive hydranetics
+ecclomistry
 
-hyper critical bacterontology
+modern didactic astroscience with an emphasis on analytical neuroscience
 
-hyper material hypontology
+extended cosmontology with applications in bacteroscience
 
-extended material immunanetics
+anthronautics
 
-hyper material geology
+hydrology with an emphasis on modern psychology with an emphasis on ordinal forensic neuromistry
 
-super progressive geetics
+didactic cosmonautics
 
-super critical biontology
+analytical cosmomedicine
 
-poly progressive ecclology
+archaeobiontology with applications in ecclomedicine
 
-ordinal progressive hydretics
+neuroscience with applications in immunomedicine
 
-poly analytical ecclontology
+analysis of psychanetics with applications in psychonautics
 
-hyper material neurontology
+progressive cosmomistry with an emphasis on immunography
 
-hyper didactic hypanetics
+forensic partition of hydrology
 
-extended material eccletics
+material bionautics
 
-ordinal material neuranetics
+ecclonautics with an emphasis on analytical anthromistry
 
-super didactic immunetics
+helioscience with an emphasis on hyperastroscience with applications in partition of astromedicine
 
-super didactic biography
+hyposcience
 
-ordinal analytical immunanetics
+heliomistry
 
-poly material cosmography
+didactic cosmanetics
 
-poly analytical heliology
+anthrography with applications in archaeoforensic research into anthroscience
 
-extended analytical astranetics
+geomedicine with applications in partition of hypography
 
-super material cosmology
+forensic geontology with an emphasis on hyperstudy of biontology
 
-ordinal analytical hypography
+critique of immunanetics
 
-super analytical geontology
+forensic anthroscience
 
-extended progressive geetics
+extended cosmontology
 
-modern progressive bacteranetics
+heliomedicine
 
-poly material neuranetics
+assay of bacterography
 
-ordinal progressive heliontology
+biology with an emphasis on cosmetics with an emphasis on hydranetics
 
-super material neuretics
+microdidactic hypomedicine
 
-super critical astretics
+polybianetics with applications in partition of hydranetics
 
-archaeo critical cosmanetics
+critical geanetics with an emphasis on cosmoscience
 
-poly didactic biology
+analysis of hydronautics with applications in progressive partition of neuronautics
 
-super material ecclography
+anthrology with applications in immunontology
 
-ordinal progressive geontology
+material hypanetics
 
-hyper didactic bacteretics
+ecclomistry with applications in critical analysis of eccletics
 
-modern material heliography
+astrology
+
+material investigation of astroscience
+
+assay of hydretics
+
+hydrontology with an emphasis on polyimmunology with applications in microforensic research into hypology
+
+ecclanetics
+
+critique of bioscience
+
+critique of astretics
+
+progressive partition of hyposcience
+
+eccloscience with an emphasis on cosmoscience with applications in modern ecclomedicine
+
+material immunomistry with an emphasis on investigation of biomistry
+
+psychontology
+
+helianetics with applications in astronautics with applications in geonautics
+
+didactic psychography with applications in polyforensic hypomedicine
+
+extended helionautics
+
+anthrontology with applications in hydrography
