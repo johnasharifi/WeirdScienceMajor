@@ -44,20 +44,19 @@ class ProceduralString {
             return BridgingTokens[(BridgingTokens.count() * Math.random()).toInt()];
         }
 
+        // define a threshold after which we do not generate an additional substring
+        val adjectiveThreshold = 0.3;
+        val recurseMaxlen = 40;
     }
 
+    private val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
+    private val prop2 = if (adjectiveThreshold < Math.random()) "" else getRandomQualifier();
+    private val prop3 = if (adjectiveThreshold < Math.random()) "" else getRandomVerbOf();
+
+    private val prop4 = getRandomField()
+    private val prop5 = getRandomOlogies()
+
     public override fun toString(): String {
-        val adjectiveThreshold = 0.3;
-        val prop1 = if (adjectiveThreshold < Math.random()) "" else getRandomIntensifier();
-        val prop2 = if (adjectiveThreshold < Math.random()) "" else getRandomQualifier();
-        val prop3 = if (adjectiveThreshold < Math.random()) "" else getRandomVerbOf();
-
-        val prop4 = getRandomField()
-        val prop5 = getRandomOlogies()
-
-        // define a threshold after which we do not generate additional specifiers
-        val recurseMaxlen = 40;
-
         var current = prop1 + prop2 + prop3 + prop4 + prop5;
 
         if (current.length * 1.0f / recurseMaxlen < Math.random()) {
