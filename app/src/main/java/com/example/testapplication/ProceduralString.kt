@@ -15,11 +15,11 @@ class ProceduralString(parentLength: Int) {
     private var parentLength: Int = 0
 
     companion object {
-        private val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ")
-        private val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ")
+        private val Intensifiers = arrayOf("super-", "poly", "hyper", "extended ", "modern ", "archaeo", "ordinal ", "applied ", "mechno", "techno", "micro")
+        private val Qualifiers = arrayOf("progressive ", "critical ", "analytical ", "didactic ", "material ", "forensic ")
         private val VerbOf = arrayOf("analysis of ", "study of ", "critique of ", "investigation of ", "research into ", "assay of ", "partition of ")
-        private val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun")
-        private val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics")
+        private val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun", "anthr", "psych")
+        private val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics", "oscience", "omedicine", "onautics", "omistry")
         private val BridgingTokens = arrayOf(" with applications in ", " with an emphasis on ")
 
         fun getRandomIntensifier(): String {
