@@ -45,8 +45,16 @@ class ProceduralString {
     val prop4 = getRandomOlogies()
 
     public override fun toString(): String {
-        println(prop1 + prop2 + prop3 + prop4)
-        // TODO concatenate once, cache result
-        return prop1 + prop2 + prop3 + prop4
+        // define a threshold after which we do not generate additional specificiers
+        val recurseMaxlen = 40;
+
+        val current = prop1 + prop2 + prop3 + prop4;
+
+        if (current.length * 1.0f / recurseMaxlen < Math.random()) {
+            val childString = ProceduralString();
+            return current + " of " + childString.toString();
+        }
+
+        return current;
     }
 }
