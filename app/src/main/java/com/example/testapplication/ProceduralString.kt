@@ -56,7 +56,7 @@ class ProceduralString {
     private val prop4 = getRandomField()
     private val prop5 = getRandomOlogies()
 
-    var current = "";
+    private var current = "";
     init{
         current = prop1 + prop2 + prop3 + prop4 + prop5;
 
