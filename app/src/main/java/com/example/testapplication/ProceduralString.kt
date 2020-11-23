@@ -18,7 +18,7 @@ class ProceduralString {
         private val VerbOf = arrayOf("analysis of ", "study of ", "critique of ", "investigation of ", "research into ", "assay of ", "partition of ")
         private val Fields = arrayOf("neur", "hydr", "hyp", "bi", "bacter", "eccl", "cosm", "astr", "ge", "heli", "immun")
         private val Ologies = arrayOf("ology", "ontology", "ography", "anetics", "etics")
-        private val BridgingTokens = arrayOf(" with applications in ", " with an emphasis on ", " of ")
+        private val BridgingTokens = arrayOf(" with applications in ", " with an emphasis on ")
 
         fun getRandomIntensifier(): String {
             return Intensifiers[(Intensifiers.count() * Math.random()).toInt()];
